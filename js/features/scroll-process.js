@@ -1,16 +1,42 @@
 function initScrollProgress() {
-    const scrollBar = document.getElementById("scroll-bar");
 
-    if (!scrollBar) return;
+  const scrollBar =
+    document.getElementById("scroll-bar");
 
-    window.addEventListener("scroll", function () {
-        const scrollTop = document.documentElement.scrollTop;
-        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  if (!scrollBar) {
+    console.error("Scroll bar element not found");
+    return;
+  }
 
-        const scrolled = (scrollTop / height) * 100;
+  // UPDATE PROGRESS
+  function updateScrollProgress() {
 
-        scrollBar.style.width = scrolled + "%";
-    });
-    console.log("Scroll working");
+    const scrollTop =
+      window.scrollY;
+
+    const documentHeight =
+      document.documentElement.scrollHeight -
+      window.innerHeight;
+
+    const scrollPercent =
+      (scrollTop / documentHeight) * 100;
+
+    scrollBar.style.width =
+      `${scrollPercent}%`;
+  }
+
+  // LISTENER
+  window.addEventListener(
+    "scroll",
+    updateScrollProgress
+  );
+
+  // INITIAL LOAD
+  updateScrollProgress();
+
+  console.log("Scroll progress initialized");
+
 }
+
+// INIT
 initScrollProgress();

@@ -1,149 +1,461 @@
+/* =========================
+   GOOGLE FONT
+========================= */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
 
- /* DARK MODE BASE */
-body.dark {
-  background-color: #020617; /* deep navy */
-  color: #e2e8f0;
-}
+/* =========================
+   RESET
+========================= */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 
-/* Sections */
-body.dark section {
-  background: #020617 !important;
-}
-
-/* Cards */
-body.dark .bg-white {
-  background-color: #1e293b !important;
-}
-
-/* TEXT FIXES */
-body.dark h1,
-body.dark h2,
-body.dark h3,
-body.dark h4 {
-  color: #f8fafc !important;
+  transition:
+    background-color .3s ease,
+    color .3s ease,
+    border-color .3s ease,
+    transform .3s ease,
+    box-shadow .3s ease;
 }
 
-body.dark p {
-  color: #cbd5e1 !important;
+/* =========================
+   HTML + BODY
+========================= */
+html{
+  scroll-behavior:smooth;
 }
 
-/* Sub text */
-body.dark .text-slate-600,
-body.dark .text-gray-600 {
-  color: #94a3b8 !important;
+body{
+  font-family:'Inter',sans-serif;
+
+  overflow-x:hidden;
+
+  background:
+    radial-gradient(circle at top left,
+      rgba(99,102,241,0.08),
+      transparent 30%),
+
+    radial-gradient(circle at bottom right,
+      rgba(168,85,247,0.08),
+      transparent 30%),
+
+    #f8fafc;
+
+  color:#0f172a;
 }
 
-/* Buttons */
-body.dark a {
-  color: #818cf8;
-}
-/* DARK NAVBAR */
-body.dark nav {
-  background-color: rgba(2, 6, 23, 0.9);
-  border-bottom: 1px solid #1e293b;
+/* =========================
+   DARK MODE
+========================= */
+.dark body{
+  background:
+    radial-gradient(circle at top left,
+      rgba(99,102,241,0.10),
+      transparent 25%),
+
+    radial-gradient(circle at bottom right,
+      rgba(168,85,247,0.10),
+      transparent 25%),
+
+    #020617;
+
+  color:#f8fafc;
 }
 
-/* DARK TEXT */
-body.dark .nav-link {
-  color: #cbd5e1;
+/* =========================
+   SECTION FIX
+========================= */
+section{
+  background:transparent !important;
 }
 
-body.dark .nav-link:hover {
-  color: #818cf8;
-}
-/* Scrollbar Styling */
- ::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #6366f1;
-  border-radius: 10px;
-}
-
-body.dark ::-webkit-scrollbar-thumb {
-  background: #818cf8;
-}
-h2::after {
-  content: "";
-  display: block;
-  width: 60%;
-  height: 4px;
-  margin: 8px auto 0;
-  background: linear-gradient(to right, #6366f1, #8b5cf6);
-  border-radius: 10px;
-}
-body {
-  font-size: 16px;
+/* =========================
+   TEXT FIXES
+========================= */
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark h5,
+.dark h6{
+  color:white !important;
 }
 
-p {
-  font-size: 20px;
-  line-height: 1.5;
-}
-/* Smooth modal animation */
-#contact-modal {
-  transition: all 0.3s ease;
+.dark p,
+.dark span,
+.dark li{
+  color:#cbd5e1 !important;
 }
 
-/* Dark mode support */
-body.dark #contact-modal .bg-white {
-  background-color: #1e293b;
-  color: white;
+.dark .text-slate-600,
+.dark .text-gray-600,
+.dark .text-gray-500{
+  color:#94a3b8 !important;
 }
 
-body.dark input,
-body.dark textarea {
-  background-color: #0f172a;
-  color: white;
-  border: 1px solid #334155;
+/* =========================
+   NAVBAR
+========================= */
+nav{
+  backdrop-filter:blur(20px);
+  -webkit-backdrop-filter:blur(20px);
 }
-body.dark #contact-btn {
-  background-color: #818cf8;
+
+.dark nav{
+  background:rgba(15,23,42,0.75) !important;
+  border-color:rgba(255,255,255,0.08);
 }
-/* Floating button animation */
+
+/* =========================
+   NAV LINKS
+========================= */
+.nav-link{
+  position:relative;
+
+  font-size:15px;
+  font-weight:600;
+
+  color:#334155;
+
+  letter-spacing:0.3px;
+}
+
+.dark .nav-link{
+  color:#cbd5e1;
+}
+
+.nav-link:hover{
+  color:#6366f1;
+}
+
+.nav-link::after{
+  content:"";
+
+  position:absolute;
+
+  left:0;
+  bottom:-8px;
+
+  width:0%;
+  height:2px;
+
+  border-radius:999px;
+
+  background:
+    linear-gradient(
+      to right,
+      #6366f1,
+      #8b5cf6
+    );
+
+  transition:width .3s ease;
+}
+
+.nav-link:hover::after{
+  width:100%;
+}
+
+/* =========================
+   HEADING DESIGN
+========================= */
+h2{
+  position:relative;
+}
+
+h2::after{
+  content:"";
+
+  display:block;
+
+  width:90px;
+  height:5px;
+
+  margin:16px auto 0;
+
+  border-radius:999px;
+
+  background:
+    linear-gradient(
+      to right,
+      #6366f1,
+      #a855f7
+    );
+}
+
+/* =========================
+   CARD DESIGN
+========================= */
+.project-card,
+.skill-card,
+.edu-card{
+  background:white;
+
+  border:1px solid rgba(148,163,184,0.15);
+
+  border-radius:24px;
+
+  box-shadow:
+    0 10px 30px rgba(15,23,42,0.06);
+}
+
+.dark .project-card,
+.dark .skill-card,
+.dark .edu-card{
+  background:#0f172a;
+
+  border:1px solid rgba(255,255,255,0.08);
+}
+
+.project-card:hover,
+.skill-card:hover,
+.edu-card:hover{
+  transform:translateY(-10px);
+
+  box-shadow:
+    0 20px 40px rgba(99,102,241,0.18);
+}
+
+/* =========================
+   HERO IMAGE
+========================= */
+img{
+  user-select:none;
+}
+
+/* =========================
+   BUTTON GLOW
+========================= */
+button:hover,
+a:hover{
+  box-shadow:
+    0 10px 30px rgba(99,102,241,0.20);
+}
+
+/* =========================
+   INPUTS
+========================= */
+input,
+textarea{
+  background:white;
+}
+
+.dark input,
+.dark textarea{
+  background:#0f172a;
+
+  color:white;
+
+  border:1px solid rgba(255,255,255,0.08);
+}
+
+input:focus,
+textarea:focus{
+  outline:none;
+
+  border-color:#6366f1 !important;
+
+  box-shadow:
+    0 0 0 4px rgba(99,102,241,0.15);
+}
+
+/* =========================
+   SEARCH BAR
+========================= */
+#project-search{
+  transition:all .3s ease;
+}
+
+#project-search:focus{
+  transform:scale(1.02);
+}
+
+/* =========================
+   CONTACT BUTTON
+========================= */
+#contact-btn{
+  animation:floatButton 3s ease-in-out infinite;
+}
+
+@keyframes floatButton{
+
+  0%{
+    transform:translateY(0px);
+  }
+
+  50%{
+    transform:translateY(-10px);
+  }
+
+  100%{
+    transform:translateY(0px);
+  }
+
+}
+
+/* =========================
+   TYPING CURSOR
+========================= */
+#typing-text::after{
+  content:"|";
+
+  margin-left:4px;
+
+  color:#818cf8;
+
+  animation:blink .8s infinite;
+}
+
+@keyframes blink{
+
+  50%{
+    opacity:0;
+  }
+
+}
+
+/* =========================
+   MODAL
+========================= */
+#contact-modal{
+  transition:all .3s ease;
+}
+
+.dark #modal-content{
+  background:#0f172a !important;
+}
+
+/* =========================
+   SCROLLBAR
+========================= */
+::-webkit-scrollbar{
+  width:10px;
+}
+
+::-webkit-scrollbar-track{
+  background:transparent;
+}
+
+::-webkit-scrollbar-thumb{
+  background:
+    linear-gradient(
+      to bottom,
+      #6366f1,
+      #8b5cf6
+    );
+
+  border-radius:999px;
+}
+
+/* =========================
+   SELECTION
+========================= */
+::selection{
+  background:#6366f1;
+  color:white;
+}
+
+/* =========================
+   FADE ANIMATION
+========================= */
+.fade-in{
+  animation:fadeIn 1s ease;
+}
+
+@keyframes fadeIn{
+
+  from{
+    opacity:0;
+    transform:translateY(30px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width:768px){
+
+  h1{
+    font-size:3rem !important;
+    line-height:1.1;
+  }
+
+  h2{
+    font-size:2.2rem !important;
+  }
+
+  .nav-link{
+    font-size:14px;
+  }
+
+  p{
+    font-size:15px;
+  }
+
+}
+
+/* =========================
+   EXTRA SMALL
+========================= */
+@media (max-width:500px){
+
+  #contact-btn{
+    width:56px;
+    height:56px;
+  }
+
+}
+
+/* CURSOR POINTER */
+button,
+a,
+input,
+textarea {
+  caret-color: #4f46e5;
+}
+
+.dark input,
+.dark textarea {
+  caret-color: white;
+}
+
+/* FIX CURSOR POINTER */
+
+button,
+a,
+input,
+textarea {
+  cursor: pointer;
+}
+
+/* TEXT INPUT CURSOR */
+
+input,
+textarea {
+  cursor: text;
+}
+
+/* CLOSE BUTTON */
+
+#close-modal {
+  cursor: pointer !important;
+}
+
+/* CONTACT BUTTON */
+
 #contact-btn {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer !important;
 }
 
-#contact-btn:hover {
-  transform: scale(1.1);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-}
-#project-search {
-  transition: all 0.3s ease;
-}
+/* SUBMIT + CANCEL */
 
-#project-search:focus {
-  border-color: #6366f1;
-}
-
-/* NAV LINKS */
-.nav-link {
-  position: relative;
-  font-size: 16px;
-  font-weight: 600;
-  color: #1e293b !important;
-  letter-spacing: 0.5px;
-}
-
-/* Hover */
-.nav-link:hover {
-  color: #4f46e5 !important;
-}
-
-/* Underline animation */
-.nav-link::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -6px;
-  width: 0%;
-  height: 2px;
-  background: linear-gradient(to right, #6366f1, #8b5cf6);
-  transition: width 0.3s ease;
-}
-
-.nav-link:hover::after {
-  width: 100%;
+#cancel-btn,
+button[type="submit"] {
+  cursor: pointer !important;
 }

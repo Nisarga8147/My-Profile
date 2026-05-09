@@ -4,34 +4,48 @@ const skillsData = [
     category: "Frontend",
     name: "JavaScript",
     shortLabel: "JS",
-    description: "ES6+, DOM manipulation, events, async patterns, and browser APIs."
+
+    description:
+      "Experienced in ES6+, DOM manipulation, asynchronous programming, events, and browser APIs."
   },
+
   {
     id: 2,
     category: "Frontend",
-    name: "React",
+    name: "React.js",
     shortLabel: "RE",
-    description: "Component-driven UI, hooks, routing patterns, and state management basics."
+
+    description:
+      "Skilled in component-based UI development, hooks, routing, and state management."
   },
+
   {
     id: 3,
     category: "Frontend",
     name: "Tailwind CSS",
     shortLabel: "TW",
-    description: "Utility-first styling, responsive layout, and consistent UI systems."
+
+    description:
+      "Proficient in responsive design, utility-first styling, and modern UI development."
   },
+
   {
     id: 4,
     category: "Backend",
     name: "Node.js",
     shortLabel: "ND",
-    description: "REST APIs, Express middleware, authentication patterns, and tooling."
+
+    description:
+      "Knowledge of REST APIs, Express.js middleware, authentication, and backend tooling."
   },
+
   {
     id: 5,
     category: "Backend",
     name: "MongoDB",
     shortLabel: "DB",
-    description: "Schema design basics, queries, indexes, and aggregation fundamentals."
+
+    description:
+      "Familiar with schema design, CRUD operations, indexing, and aggregation pipelines."
   }
 ];

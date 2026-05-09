@@ -1,35 +1,76 @@
 const projectsData = [
   {
     id: 1,
-    name: "AI for personal assisstance",
-    category: "Full Stack Development (AI/NLP-based)",
-    description:"Designed and implemented an NLP-based personal assistant to handle queries, provide information, and improve user productivity.",
-    technologies: ["HTML", "CSS", "JavaScript", "Node.js", "MongoDB", "NLP"],
+    name: "AI Personal Assistant",
+    category: "Full Stack Development (AI/NLP)",
+    description:
+      "Designed and implemented an NLP-based personal assistant capable of handling user queries, providing smart responses, and improving productivity.",
+
+    technologies: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Node.js",
+      "MongoDB",
+      "NLP"
+    ],
+
     status: "Completed"
   },
+
   {
     id: 2,
-    name: "Barcode and QRcode detection with TTS",
+    name: "Barcode & QR Code Detection with TTS",
     category: "Computer Vision / Artificial Intelligence",
-    description:"Developed a computer vision-based system to detect and decode barcodes and QR codes from images, and convert the extracted information into speech using Text-to-Speech for improved accessibility.",
-    technologies: ["Python", "OpenCV", "Pyzbar", "Text-to-Speech (gTTS / pyttsx3)"],
-    status: "Completed",
+
+    description:
+      "Developed a computer vision-based system to detect and decode barcodes and QR codes from images, then convert the extracted information into speech using Text-to-Speech for accessibility.",
+
+    technologies: [
+      "Python",
+      "OpenCV",
+      "Pyzbar",
+      "gTTS",
+      "pyttsx3"
+    ],
+
+    status: "Completed"
   },
+
   {
     id: 3,
-    name: "LinkedIn clone",
+    name: "LinkedIn Clone",
     category: "Backend Development",
-    description:"Developed a CLI-based LinkedIn inspired application using Node.js and Express.js that simulates core networking platform features such as user profiles, post management, authentication flow and structured backend routing.",
-    technologies: ["Node.js", "Express.js", "JavaScript", "CLI", "MongoDB"],
+
+    description:
+      "Built a CLI-based LinkedIn-inspired application using Node.js and Express.js with features such as authentication, post management, routing, and user profile handling.",
+
+    technologies: [
+      "Node.js",
+      "Express.js",
+      "JavaScript",
+      "MongoDB",
+      "CLI"
+    ],
+
     status: "Live"
   },
+
   {
     id: 4,
-    name: "Responsive portfolio website",
+    name: "Responsive Portfolio Website",
     category: "Frontend Development",
+
     description:
-      "Designed and deployed a premium personal portfolio website with dark mode, animations, sublication section and recriter-focused branding.",
-    technologies: ["HTML", "CSS", "JavaScript", "Tailwind CSS"],
+      "Designed and deployed a modern personal portfolio website with dark mode, animations, responsive layouts, and recruiter-focused branding.",
+
+    technologies: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Tailwind CSS"
+    ],
+
     status: "Demo"
   }
 ];

@@ -1,12 +1,55 @@
 function setGreeting() {
-  const greetingElement = document.getElementById("greeting-message");
 
-  const hour = new Date().getHours();
-  let greeting = "Hello";
+  // TARGET ELEMENT
+  const greetingElement =
+    document.getElementById("greeting-message");
 
-  if (hour < 12) greeting = "Good Morning";
-  else if (hour < 18) greeting = "Good Afternoon";
-  else greeting = "Good Evening";
+  if (!greetingElement) return;
 
-  greetingElement.textContent = greeting + " 👋";
+  // CURRENT HOUR
+  const hour =
+    new Date().getHours();
+
+  let greeting = "";
+  let emoji = "";
+
+  // MORNING
+  if (hour >= 5 && hour < 12) {
+
+    greeting = "Good Morning";
+    emoji = "☀️";
+
+  }
+
+  // AFTERNOON
+  else if (hour >= 12 && hour < 17) {
+
+    greeting = "Good Afternoon";
+    emoji = "🌤️";
+
+  }
+
+  // EVENING
+  else if (hour >= 17 && hour < 21) {
+
+    greeting = "Good Evening";
+    emoji = "🌇";
+
+  }
+
+  // NIGHT
+  else {
+
+    greeting = "Good Night";
+    emoji = "🌙";
+
+  }
+
+  // UPDATE UI
+  greetingElement.textContent =
+    `${greeting} ${emoji}`;
+
 }
+
+// INIT
+setGreeting();
