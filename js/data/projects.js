@@ -2,10 +2,9 @@ const projectsData = [
   {
     id: 1,
     name: "AI Personal Assistant",
-    category: "Full Stack Development (AI/NLP)",
+    category: "AI / FULL STACK",
     description:
-      "Designed and implemented an NLP-based personal assistant capable of handling user queries, providing smart responses, and improving productivity.",
-
+      "Designed and developed an NLP-based AI personal assistant capable of handling user queries, providing intelligent responses, and improving productivity through conversational interaction.",
     technologies: [
       "HTML",
       "CSS",
@@ -21,10 +20,10 @@ const projectsData = [
   {
     id: 2,
     name: "Barcode & QR Code Detection with TTS",
-    category: "Computer Vision / Artificial Intelligence",
+    category: "ARTIFICIAL INTELLIGENCE",
 
     description:
-      "Developed a computer vision-based system to detect and decode barcodes and QR codes from images, then convert the extracted information into speech using Text-to-Speech for accessibility.",
+      "Built a computer vision-based system capable of detecting and decoding barcodes and QR codes from images and converting extracted information into speech using Text-to-Speech technology for accessibility enhancement.",
 
     technologies: [
       "Python",
@@ -40,10 +39,10 @@ const projectsData = [
   {
     id: 3,
     name: "LinkedIn Clone",
-    category: "Backend Development",
+    category: "BACKEND DEVELOPMENT",
 
     description:
-      "Built a CLI-based LinkedIn-inspired application using Node.js and Express.js with features such as authentication, post management, routing, and user profile handling.",
+      "Developed a CLI-based LinkedIn-inspired application using Node.js and Express.js featuring authentication, user profiles, post management, backend routing, and networking functionalities.",
 
     technologies: [
       "Node.js",
@@ -53,13 +52,13 @@ const projectsData = [
       "CLI"
     ],
 
-    status: "Live"
+    status: "Completed"
   },
 
   {
     id: 4,
     name: "Responsive Portfolio Website",
-    category: "Frontend Development",
+    category: "FRONTEND DEVELOPMENT",
 
     description:
       "Designed and deployed a modern personal portfolio website with dark mode, animations, responsive layouts, and recruiter-focused branding.",
@@ -71,6 +70,6 @@ const projectsData = [
       "Tailwind CSS"
     ],
 
-    status: "Demo"
+    status: "Completed"
   }
 ];

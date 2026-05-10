@@ -14,7 +14,7 @@ const educationsData = [
     course: "PCMB",
     year: "2020 - 2022",
     college: "Mandavya Excellence PU College, Mandya",
-    percentage: "84%"
+    percentage: "82%"
   },
 
   {

@@ -315,6 +315,77 @@ textarea:focus{
 }
 
 /* =========================
+   STYLISH TYPING TEXT
+========================= */
+
+#typing-text{
+
+  font-weight:700;
+
+  letter-spacing:0.5px;
+
+  background:
+    linear-gradient(
+      270deg,
+      #6366f1,
+      #8b5cf6,
+      #ec4899,
+      #06b6d4,
+      #6366f1
+    );
+
+  background-size:300% 300%;
+
+  background-clip:text;
+  -webkit-background-clip:text;
+
+  color:transparent;
+  -webkit-text-fill-color:transparent;
+
+  animation:
+    gradientMove 6s ease infinite,
+    glowText 2s ease-in-out infinite alternate;
+}
+
+/* MOVING GRADIENT */
+
+@keyframes gradientMove{
+
+  0%{
+    background-position:0% 50%;
+  }
+
+  50%{
+    background-position:100% 50%;
+  }
+
+  100%{
+    background-position:0% 50%;
+  }
+
+}
+
+/* GLOW EFFECT */
+
+@keyframes glowText{
+
+  from{
+    filter:
+      drop-shadow(
+        0 0 6px rgba(99,102,241,0.4)
+      );
+  }
+
+  to{
+    filter:
+      drop-shadow(
+        0 0 16px rgba(168,85,247,0.7)
+      );
+  }
+
+}
+
+/* =========================
    MODAL
 ========================= */
 #contact-modal{
@@ -412,50 +483,47 @@ textarea:focus{
 
 }
 
-/* CURSOR POINTER */
+/* =========================
+   CURSOR POINTER
+========================= */
 button,
 a,
 input,
-textarea {
-  caret-color: #4f46e5;
-}
-
-.dark input,
-.dark textarea {
-  caret-color: white;
-}
-
-/* FIX CURSOR POINTER */
-
-button,
-a,
-input,
-textarea {
-  cursor: pointer;
+textarea{
+  cursor:pointer;
 }
 
 /* TEXT INPUT CURSOR */
-
 input,
-textarea {
-  cursor: text;
+textarea{
+  cursor:text;
+}
+
+/* CARET */
+button,
+a,
+input,
+textarea{
+  caret-color:#4f46e5;
+}
+
+.dark input,
+.dark textarea{
+  caret-color:white;
 }
 
 /* CLOSE BUTTON */
-
-#close-modal {
-  cursor: pointer !important;
+#close-modal{
+  cursor:pointer !important;
 }
 
 /* CONTACT BUTTON */
-
-#contact-btn {
-  cursor: pointer !important;
+#contact-btn{
+  cursor:pointer !important;
 }
 
 /* SUBMIT + CANCEL */
-
 #cancel-btn,
-button[type="submit"] {
-  cursor: pointer !important;
+button[type="submit"]{
+  cursor:pointer !important;
 }
